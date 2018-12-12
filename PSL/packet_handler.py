@@ -60,7 +60,7 @@ class Handler():
             return glob.glob('/dev/tty*') + glob.glob('/dev/cu*')
         else:
             # Assume Linux or something else
-            return glob.glob('/dev/ttyACM*') + glob.glob('/dev/ttyUSB*')
+            return glob.glob('/dev/ttyACM*') + glob.glob('/dev/ttyUSB*') + glob.glob('/dev/ttyS*')
 
     def connectToPort(self, portname):
         import platform
